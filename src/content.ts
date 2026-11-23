@@ -28,7 +28,6 @@ export const site = {
   about: {
     title: 'Por trás das cartas, uma conversa com Raissa.',
     paragraphs: [
-      'Sou Raissa Vitória, de São Paulo, e realizo leituras online de Baralho Cigano.',
       'Minha proposta é abrir um espaço de reflexão sobre suas dúvidas, seus relacionamentos e os caminhos que você deseja explorar. Um convite para olhar para o seu momento com mais atenção.',
       'Antes de agendar, podemos conversar sobre como funciona a leitura e qual opção faz sentido para você.',
     ],
