@@ -1,8 +1,44 @@
-import { CalendarDays, Compass, Heart, Layers3, Menu, MessageCircle, Monitor, Moon, Plus, Sparkles, X, Instagram, MapPin, Check, type LucideProps } from 'lucide-react';
+import {
+  CalendarDays,
+  Check,
+  Compass,
+  Heart,
+  Instagram,
+  Layers3,
+  MapPin,
+  Menu,
+  MessageCircle,
+  Monitor,
+  Moon,
+  Plus,
+  Sparkles,
+  X,
+  type LucideIcon,
+  type LucideProps,
+} from 'lucide-react';
+import type { IconName } from '../types/content';
 
-const icons = { calendar: CalendarDays, compass: Compass, heart: Heart, cards: Layers3, message: MessageCircle, screen: Monitor, moon: Moon, sparkles: Sparkles, menu: Menu, close: X, plus: Plus, instagram: Instagram, pin: MapPin, check: Check };
-export function Icon({ name, ...props }: LucideProps & { name: string }) {
-  const Component = icons[name as keyof typeof icons] || Sparkles;
+const iconComponents = {
+  calendar: CalendarDays,
+  cards: Layers3,
+  check: Check,
+  close: X,
+  compass: Compass,
+  heart: Heart,
+  instagram: Instagram,
+  menu: Menu,
+  message: MessageCircle,
+  moon: Moon,
+  pin: MapPin,
+  plus: Plus,
+  screen: Monitor,
+  sparkles: Sparkles,
+} as const satisfies Record<IconName, LucideIcon>;
+
+type IconProps = LucideProps & { name: IconName };
+
+export function Icon({ name, ...props }: IconProps) {
+  const Component = iconComponents[name];
   return <Component aria-hidden="true" strokeWidth={1.5} {...props} />;
 }
 

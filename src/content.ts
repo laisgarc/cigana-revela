@@ -1,3 +1,5 @@
+import type { SiteContent } from './types/content';
+
 /** Edite aqui os textos e os dados públicos da página. */
 export const site = {
   name: 'Raissa Vitória',
@@ -40,4 +42,4 @@ export const site = {
     { question: 'Quais assuntos posso trazer?', answer: 'Relacionamentos, escolhas, mudanças e autoconhecimento podem ser pontos de partida para a conversa. Fale sobre o que deseja abordar para confirmar se a proposta da leitura atende à sua necessidade.' },
     { question: 'Como funcionam pagamento e remarcação?', answer: 'As formas de pagamento e as condições de agendamento ou remarcação devem ser consultadas diretamente com a Raissa antes de confirmar seu atendimento.' },
   ],
-};
+} as const satisfies SiteContent;

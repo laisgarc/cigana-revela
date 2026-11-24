@@ -24,10 +24,13 @@ npm run preview
 | Arquivo | Conteúdo |
 | --- | --- |
 | `src/content.ts` | Dados públicos, hero, temas, etapas, apresentação e perguntas frequentes |
-| `src/App.tsx` | Composição das seções e textos complementares |
+| `src/App.tsx` | Composição de alto nível da página |
+| `src/components/sections/` | Seções independentes da landing page |
+| `src/components/Layout.tsx` | Cabeçalho, rodapé e contato fixo |
 | `src/styles.css` | Paleta, tipografia, espaçamento e breakpoints |
 | `src/components/CardArtwork.tsx` | Ilustrações vetoriais decorativas originais |
 | `src/components/Contact.tsx` | Botões, evento de clique e alternativa de contato |
+| `src/hooks/` | Comportamentos reutilizáveis de teclado e visibilidade |
 | `src/lib/contact.js` | Validação do número e montagem do link do WhatsApp |
 | `index.html` | Título, descrição, canonical, Open Graph e dados estruturados |
 | `public/` | Favicon, robots.txt e sitemap |
