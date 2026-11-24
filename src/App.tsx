@@ -20,7 +20,7 @@ function App() {
       </a>
       <Header />
       <main id="conteudo">
-        <HeroSect ion ref={heroRef} />
+        <HeroSection ref={heroRef} />
         <ReadingSection />
         <ThemesSection />
         <AboutSection />
